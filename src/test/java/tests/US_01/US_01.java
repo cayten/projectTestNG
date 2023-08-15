@@ -1,7 +1,6 @@
 package tests.US_01;
 
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -40,9 +39,9 @@ public class US_01 extends TestBaseRapor {
         extentTest = extentReports.createTest("Vendor Registration bolumu doldurulmali","Vendor Registration bolumu dolduruldu");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
 
-        spendinGoodPage.email.sendKeys("caytenn@gmail.com");
-        spendinGoodPage.password.sendKeys("Cayten.500134");
-        spendinGoodPage.comfirmPassword.sendKeys("Cayten.500134");
+        spendinGoodPage.email.sendKeys(ConfigReader.getProperty("pmEmail"));
+        spendinGoodPage.password.sendKeys(ConfigReader.getProperty("pmPassword"));
+        spendinGoodPage.comfirmPassword.sendKeys(ConfigReader.getProperty("pmPassword"));
         Assert.assertFalse(spendinGoodPage.gorunurMu.isDisplayed());
 
 
