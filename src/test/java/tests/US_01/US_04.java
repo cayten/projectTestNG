@@ -23,30 +23,35 @@ public class US_04 extends TestBaseRapor {
 
 
     @Test
-    public void TC_001(){
+    public void TC_001() throws InterruptedException {
 
         extentTest = extentReports.createTest("Orders da Browse products a gidilmeli","Orders da Browse products a gidildi");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
         Driver.getDriver().get(ConfigReader.getProperty("pMarketUrl"));
 
         spendinGoodPage.singnIn.click();
+        Thread.sleep(1000);
         spendinGoodPage.userName.sendKeys(ConfigReader.getProperty("pmEmail"));
+        Thread.sleep(1000);
         spendinGoodPage.password2.sendKeys(ConfigReader.getProperty("pmPassword"));
+        Thread.sleep(1000);
         spendinGoodPage.giris.click();
+        Thread.sleep(1000);
         spendinGoodPage.signOut.click();
+        Thread.sleep(1000);
 
 
         spendinGoodPage.searchBox.sendKeys(ConfigReader.getProperty("searchBox"), Keys.ENTER);
-        ReusableMethods.waitFor(2);
+        Thread.sleep(1000);
 
         spendinGoodPage.urun.click();
-        ReusableMethods.waitFor(2);
+        Thread.sleep(1000);
 
         spendinGoodPage.sepet.click();
-        ReusableMethods.waitFor(2);
+        Thread.sleep(1000);
 
         spendinGoodPage.viewCard.click();
-        ReusableMethods.waitFor(2);
+        Thread.sleep(1000);
 
         Assert.assertTrue(spendinGoodPage.miktar.isDisplayed());
 
@@ -54,12 +59,12 @@ public class US_04 extends TestBaseRapor {
     }
 
     @Test
-    public void TC_002() {
+    public void TC_002() throws InterruptedException {
 
         extentTest = extentReports.createTest("secilen urunlerin miktari ayarlanir", "secilen urunlerin miktari ayarlanir");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
         spendinGoodPage.plus.click();
-        ReusableMethods.waitFor(2);
+        Thread.sleep(1000);
         spendinGoodPage.minus.click();
 
 
@@ -68,23 +73,23 @@ public class US_04 extends TestBaseRapor {
     }
 
     @Test
-    public void TC_003() throws IOException {
+    public void TC_003() throws IOException, InterruptedException {
 
         extentTest = extentReports.createTest("stok fazlasi urunun eklenmedigi gorunmeli", "stok fazlasi urunun eklenmedigi gorundu");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
 
         spendinGoodPage.searchBox.sendKeys(ConfigReader.getProperty("searcBox2"),Keys.ENTER);
-
+        Thread.sleep(1000);
         spendinGoodPage.stokFazlasiUrun.click();
 
         ReusableMethods.getScreenshot("stok fazlasi urun sepete eklenemiyor");
-
+        Thread.sleep(1000);
         spendinGoodPage.sepet.click();
-
+        Thread.sleep(1000);
         spendinGoodPage.viewCard.click();
-
+        Thread.sleep(1000);
         spendinGoodPage.clearCard.click();
-
+        Thread.sleep(1000);
         ReusableMethods.getScreenshot("clear card ile silinen urun ");
 
 
@@ -93,17 +98,22 @@ public class US_04 extends TestBaseRapor {
     }
 
     @Test
-    public void TC_004_TC_005(){
+    public void TC_004_TC_005() throws InterruptedException {
 
         extentTest = extentReports.createTest("coupon secenegi gorunmeli", "coupon secenegi gorundu");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
 
         spendinGoodPage.searchBox.sendKeys(ConfigReader.getProperty("searcBox2"),Keys.ENTER);
+        Thread.sleep(1000);
         spendinGoodPage.samsung.click();
+        Thread.sleep(1000);
         spendinGoodPage.addCard.click();
+        Thread.sleep(1000);
         spendinGoodPage.sepet.click();
+        Thread.sleep(1000);
 
         spendinGoodPage.viewCard.click();
+        Thread.sleep(1000);
 
 
 
@@ -117,7 +127,7 @@ public class US_04 extends TestBaseRapor {
 
         spendinGoodPage.shoppingBilgileri.click();
 
-        //TC_008
+
 
 
 

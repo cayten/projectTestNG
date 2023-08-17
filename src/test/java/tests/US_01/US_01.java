@@ -26,7 +26,10 @@ public class US_01 extends TestBaseRapor {
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
 
         spendinGoodPage.register.click();
+        Thread.sleep(1000);
+
         spendinGoodPage.bocomeVedorButton.click();
+        Thread.sleep(1000);
         Assert.assertTrue(spendinGoodPage.becomeVendor.isDisplayed());
 
 
@@ -34,14 +37,17 @@ public class US_01 extends TestBaseRapor {
 
     }
     @Test
-    public void TC02(){
+    public void TC02() throws InterruptedException {
 
         extentTest = extentReports.createTest("Vendor Registration bolumu doldurulmali","Vendor Registration bolumu dolduruldu");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
 
         spendinGoodPage.email.sendKeys(ConfigReader.getProperty("pmEmail"));
+        Thread.sleep(1000);
         spendinGoodPage.password.sendKeys(ConfigReader.getProperty("pmPassword"));
+        Thread.sleep(1000);
         spendinGoodPage.comfirmPassword.sendKeys(ConfigReader.getProperty("pmPassword"));
+        Thread.sleep(1000);
         Assert.assertFalse(spendinGoodPage.gorunurMu.isDisplayed());
 
 

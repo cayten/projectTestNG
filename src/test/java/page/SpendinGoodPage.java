@@ -235,6 +235,179 @@ public class SpendinGoodPage {
     @FindBy(xpath = "//*[@id=\"add_new_product_dashboard\"]")
     public WebElement sgpAddNew;
 
+    //TC_003
+
+    @FindBy(xpath = "//*[@id='is_virtual']")
+    public WebElement virtual;
+
+    @FindBy(xpath = "//*[@id='is_downloadable']")
+    public WebElement dowloadable;
+
+    @FindBy(using = "//*[@id='pro_title']")
+    public WebElement productTitle;
+
+    @FindBy(xpath = "//*[@id='regular_price']")
+    public WebElement sgpPrice;
+
+    @FindBy(xpath = "//*[@id='sale_price']")
+    public WebElement salePrice;
+
+    //TC_004
+
+    @FindBy(xpath = "//*[@id='featured_img_display']")
+    public WebElement spgFoto;
+
+    @FindBy(xpath = "//*[@id=\"__wp-uploader-id-1\"]")
+    public WebElement selectFoto;
+
+    //@FindBy(xpath = "C:\Users\CCS\telefon.jpg")
+    //public WebElement sgpEklenenFoto;
+
+    //TC_005
+    @FindBy(xpath = "//*[@class='button media-button button-primary button-large media-button-select']")
+    public WebElement sgpSelect;
+
+    @FindBy(xpath = "//*[@id=\"menu-item-browse\"]")
+    public WebElement mediaLibrary;
+
+    @FindBy(xpath = "//*[@id=\"tinymce\"]")
+    public WebElement shortYazi;
+
+
+    //US_06  TC_001
+
+    @FindBy(xpath = "(//*[text()='Categories'])[1]")
+    public WebElement catagoriesBasligi;
+
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[6]")
+    public WebElement accesories;
+
+    @FindBy(xpath = "(//*[@type=\"checkbox\"])[18]")
+    public WebElement bestSeller;
+
+    @FindBy(xpath = "")
+    public WebElement books;
+
+    @FindBy(xpath = "")
+    public WebElement computers;
+
+    @FindBy(xpath = "")
+    public WebElement elektronics;
+
+    @FindBy(xpath = "")
+    public WebElement food;
+
+    @FindBy(xpath = "")
+    public WebElement giftIdeas;
+
+    @FindBy(xpath = "")
+    public WebElement healthBeauty;
+
+    @FindBy(xpath = "")
+    public WebElement homeGarden;
+
+    //US_07  TC_001
+
+    @FindBy(xpath = "//*[@id=\"sku\"]")
+    public WebElement sku;
+
+    @FindBy(xpath = "//*[@class=\"wcfm-checkbox wcfm_ele simple variable manage_stock_ele non-job_package non-resume_package non-auction non-redq_rental non-appointment non-accommodation-booking non-pw-gift-card\"]")
+    public WebElement manageStock;
+
+
+
+   //US_08 TC_001
+
+    @FindBy(xpath = "(//*[@type=\"number\"])[3]")
+    public WebElement stockQty;
+
+    @FindBy(xpath = "//*[@id=\"backorders\"]")
+    public WebElement allowBck;
+
+
+    //US_09 TC_001
+    @FindBy (xpath = "(//*[@class=\"page_collapsible_content_holder\"])[4]")
+    public WebElement shipping;
+
+    @FindBy(xpath = "//*[@id=\"weight\"]")
+    public WebElement weight;
+
+    @FindBy(xpath = "//*[@id=\"length\"]")
+    public WebElement lenght;
+
+    @FindBy(xpath = "//*[@id=\"width\"]")
+    public WebElement width;
+
+    @FindBy(xpath = "//*[@id=\"height\"]")
+    public WebElement height;
+
+    @FindBy(xpath = "//*[@id=\"_wcfmmp_processing_time\"]")
+    public WebElement processingTime;
+
+    //US_010 TC_001
+
+    @FindBy(xpath = "(//*[@class=\"page_collapsible_content_holder\"])[5]")
+    public WebElement attributes;
+
+    @FindBy(xpath = "//*[@id=\"attributes_is_active_1\"]")
+    public WebElement color;
+
+    @FindBy(xpath = "//*[@class=\"button wcfm_add_attribute_term wcfm_select_all_attributes\"]")
+    public WebElement colorSecenegi;
+
+    @FindBy(xpath = "(//*[@title=\"Toggle Block\"])[2]")
+    public WebElement yukariOk;
+
+    //TC_002
+    @FindBy(xpath = "//*[@id=\"attributes_is_active_2\"]")
+    public WebElement size;
+
+    @FindBy(xpath = "(//*[@class=\"select2-search__field\"])[3]")
+    public WebElement sizeBelirleme;
+
+    @FindBy(xpath = "//*[@title=\"Small\"]")
+    public WebElement small;
+
+    @FindBy(xpath = "//*[@title=\"Medium\"]")
+    public WebElement medium;
+
+    //US_011 TC_001
+
+    @FindBy(xpath = "(//*[@class=\"page_collapsible_content_holder\"])[9]")
+    public WebElement toptanUrunGosterme;
+
+    @FindBy(xpath = "(//*[text()='Piece Type'])[1]")
+    public WebElement urunCesidi;
+
+    @FindBy(xpath = "(//*[text()='Units Per Piece'])[1]")
+    public WebElement unitsPerPieces;
+
+    @FindBy(xpath = "(//*[text()='Min Order Quantity?'])[1]")
+    public WebElement minimumQlyt;
+
+    @FindBy(xpath = "//*[@class=\"icon-box-icon icon-orders\"]")
+    public WebElement sgpOrders;
+
+    //TC_003
+
+    @FindBy(xpath = "//*[@class=\"woocommerce-button btn btn-default btn-rounded btn-outline btn-sm btn-block view\"]")
+    public WebElement sgpView;
+
+    @FindBy(xpath = "(//*[@class=\"woocommerce-column__title\"])[1]")
+    public WebElement billingAdress;
+
+    @FindBy(xpath = "(//*[@class=\"woocommerce-column__title\"])[2]")
+    public WebElement shippingAdress;
+
+    //TC_004
+
+    @FindBy(xpath = "(//*[@href=\"https://spendinggood.com/my-account-2/edit-account/\"])[4]")
+    public WebElement sgpAccountDetail;
+
+
+
+
+
 
 
 

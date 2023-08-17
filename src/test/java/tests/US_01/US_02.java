@@ -15,7 +15,7 @@ public class US_02 extends TestBaseRapor {
     Actions actions = new Actions(Driver.getDriver());
 
     @Test
-    public void TC_001(){
+    public void TC_001() throws InterruptedException {
 
         extentTest = extentReports.createTest("istenen sayfaya gidilmeli","istenen sayfa gidildi");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
@@ -27,9 +27,13 @@ public class US_02 extends TestBaseRapor {
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
 
         spendinGoodPage.userName.sendKeys(ConfigReader.getProperty("pmEmail"));
+        Thread.sleep(1000);
         spendinGoodPage.password2.sendKeys(ConfigReader.getProperty("pmPassword"));
+        Thread.sleep(1000);
         spendinGoodPage.giris.click();
+        Thread.sleep(1000);
         spendinGoodPage.signOut.click();
+        Thread.sleep(1000);
 
         extentTest = extentReports.createTest("my account sayfas gorulmeli","my account sayfas goruldu");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
@@ -50,14 +54,14 @@ public class US_02 extends TestBaseRapor {
         Assert.assertTrue(spendinGoodPage.wishlist.isDisplayed());
         Assert.assertTrue(spendinGoodPage.logout.isDisplayed());
 
-        ReusableMethods.waitFor(1);
+
 
 
 
 
     }
     @Test
-    public void TC_003() {
+    public void TC_003() throws InterruptedException {
 
         extentTest = extentReports.createTest("dashboard altindaki basliklar gorunmeli", "dashboard altindaki basliklar gorundu");
         extentTest.info("https://pearlymarket.com/ adresine gidilir");
@@ -70,7 +74,7 @@ public class US_02 extends TestBaseRapor {
         Assert.assertTrue(spendinGoodPage.accountdetails.isDisplayed());
         Assert.assertTrue(spendinGoodPage.Wishlist.isDisplayed());
 
-        ReusableMethods.waitFor(1);
+        Thread.sleep(1000);
 
 
     }
