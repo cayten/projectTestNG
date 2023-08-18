@@ -11,7 +11,9 @@ import utilities.utilities.Driver;
 import utilities.utilities.ReusableMethods;
 import utilities.utilities.TestBaseRapor;
 
-public class US_010 extends TestBaseRapor {
+import java.io.IOException;
+
+public class US_013 extends TestBaseRapor {
 
     SpendinGoodPage spendinGoodPage = new SpendinGoodPage();
     Actions actions = new Actions(Driver.getDriver());
@@ -19,10 +21,10 @@ public class US_010 extends TestBaseRapor {
     Faker faker = new Faker();
 
     @Test
-    public void TC_001() throws InterruptedException {
+    public void TC_001() throws InterruptedException, IOException {
 
 
-        extentTest = extentReports.createTest("Color ve size goruntuleme", "Color ve size goruntulendi");
+        extentTest = extentReports.createTest("Store manager olarak, kuponları olusturabilme", "Store manager olarak, kuponları olusturabildi");
         extentTest.info("https://spendinggood.com/ adresine gidilir");
 
         Driver.getDriver().get(ConfigReader.getProperty("spgURL"));
@@ -42,9 +44,9 @@ public class US_010 extends TestBaseRapor {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         Thread.sleep(1000);
         spendinGoodPage.yeniGiris.click();
-
         Thread.sleep(1000);
-
+        spendinGoodPage.sgpMyAccount.click();
+        Thread.sleep(1000);
         spendinGoodPage.sgpProducts.click();
         Thread.sleep(1000);
 
@@ -52,48 +54,9 @@ public class US_010 extends TestBaseRapor {
         spendinGoodPage.sgpAddNew.click();
         Thread.sleep(1000);
 
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(1000);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(1000);
-
-        spendinGoodPage.attributes.click();
-        Thread.sleep(1000);
-        spendinGoodPage.color.click();
-        Thread.sleep(1000);
-        spendinGoodPage.colorSecenegi.click();
-        Thread.sleep(1000);
-        spendinGoodPage.yukariOk.click();
-        spendinGoodPage.myAccount.sendKeys();
-
-
-
-    }
-    @Test
-    public void TC_002() throws InterruptedException {
-
-
-        extentTest = extentReports.createTest("Color ve size goruntuleme", "Color ve size goruntulendi");
-        extentTest.info("https://spendinggood.com/ adresine gidilir");
-
-        Thread.sleep(1000);
-        spendinGoodPage.size.click();
-        Thread.sleep(1000);
-        Thread.sleep(1000);
-        spendinGoodPage.sizeBelirleme.click();
-        Thread.sleep(1000);
-        extentTest.info("Size secenegi; small, medium, large, extra large  oldugu dogrulandi");
-        Assert.assertTrue(spendinGoodPage.sizeBelirleme.isDisplayed());
-
-
-
-
-
-
 
 
 
 
     }
-
 }

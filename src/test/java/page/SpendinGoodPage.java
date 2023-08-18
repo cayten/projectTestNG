@@ -401,8 +401,23 @@ public class SpendinGoodPage {
 
     //TC_004
 
-    @FindBy(xpath = "(//*[@href=\"https://spendinggood.com/my-account-2/edit-account/\"])[4]")
+    @FindBy(xpath = "//*[@class=\"woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account\"]")
     public WebElement sgpAccountDetail;
+
+    @FindBy(xpath = "//*[@id=\"account_first_name\"]")
+    public WebElement sgpFirstName;
+
+    @FindBy(xpath = "//*[@id=\"account_last_name\"]")
+    public WebElement sgpLastName;
+
+    @FindBy(xpath = "//*[@id=\"account_display_name\"]")
+    public WebElement sgpDisplayName;
+
+    @FindBy(xpath = "//*[@id=\"account_email\"]")
+    public WebElement sgpAccountEmail;
+
+    @FindBy(xpath = "//*[@value=\"Save changes\"]")
+    public WebElement sgpSaveChange;
 
 
 

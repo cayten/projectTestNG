@@ -65,7 +65,7 @@ public class US_012 extends TestBaseRapor {
 
         spendinGoodPage.sgpView.click();
         Thread.sleep(1000);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        //actions.sendKeys(Keys.PAGE_DOWN).perform();
 
 
 
@@ -95,9 +95,31 @@ public class US_012 extends TestBaseRapor {
 
 
         Thread.sleep(1000);
-        actions.sendKeys(Keys.PAGE_UP);
-        Thread.sleep(1000);
         spendinGoodPage.sgpAccountDetail.click();
+        Thread.sleep(1000);
+
+        extentTest.info("hesap bilgisi ve e posta adresi goruntulendi");
+        spendinGoodPage.sgpFirstName.clear();
+        Thread.sleep(1000);
+        spendinGoodPage.sgpFirstName.sendKeys("ayten");
+        Thread.sleep(1000);
+        spendinGoodPage.sgpLastName.clear();
+        Thread.sleep(1000);
+        spendinGoodPage.sgpLastName.sendKeys("soylu");
+        Thread.sleep(1000);
+        spendinGoodPage.sgpDisplayName.clear();
+        Thread.sleep(1000);
+        spendinGoodPage.sgpDisplayName.sendKeys("cayten");
+        Thread.sleep(1000);
+        spendinGoodPage.sgpAccountEmail.clear();
+        Thread.sleep(1000);
+        spendinGoodPage.sgpAccountEmail.sendKeys("cano@gmail.com");
+        Thread.sleep(1000);
+        spendinGoodPage.sgpSaveChange.click();
+
+
+
+
 
 
     }
