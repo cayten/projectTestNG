@@ -84,6 +84,7 @@ public class US_010 extends TestBaseRapor {
         Thread.sleep(1000);
         extentTest.info("Size secenegi; small, medium, large, extra large  oldugu dogrulandi");
         Assert.assertTrue(spendinGoodPage.sizeBelirleme.isDisplayed());
+        Assert.assertTrue(spendinGoodPage.sizeBelirleme.isDisplayed());
 
 
 
